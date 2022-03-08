@@ -1,0 +1,94 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int input;
+	cout << "enter a months name for how many days are in it input: J,F,M for some months" << endl;
+	cin >> input;
+	if (input == 1) {
+		cout << "days in janury are 31" << endl;
+	}
+	if (input == 2)
+		cout << "days in febuary are 28" << endl;
+
+	if (input == 3)
+		cout << "days in march are 31" << endl;
+	if (input == 4) {
+		cout << "days in april are 30" << endl;
+	}
+	if (input == 5)
+		cout << "days in may are 31" << endl;
+
+	if (input == 6)
+		cout << "days in june are 30" << endl;
+	if (input == 7) {
+		cout << "days in july are 31" << endl;
+	}
+	if (input == 8)
+		cout << "days in august are 31" << endl;
+
+	if (input == 9)
+		cout << "days in september are 30" << endl;
+	if (input == 10) {
+		cout << "days in ocotber are 31" << endl;
+	}
+	if (input == 11)
+		cout << "days in febuary are 30" << endl;
+
+	if (input == 12)
+		cout << "days in december are 31" << endl;
+
+	int room = 1;
+	char input;
+	do {
+		switch (room) {
+		case 1:
+			cout << "your in room 1 you can go n, e, w" << endl;
+			cin >> input;
+			if (input == 'n') {
+				room = 2;
+			}
+			if (input == 'e') {
+				room = 4;
+			}
+			if (input == 'w') {
+				room = 3;
+			}
+		
+			break;
+		case 2:
+			cout << "your in room 2 you can go s" << endl;
+			cin >> input;
+			if (input == 's') {
+				room = 1;
+			}
+		
+		case 3:
+			cout << "your in room 3 you can go east " << endl;
+			cin >> input;
+			if (input == 'e') {
+				room = 1;
+			}
+		
+			break;
+		case 4:
+			cout << "your in room 4 you can go south to 5, west to 1" << endl;
+			cin >> input;
+			if (input == 's') {
+				room = 5;
+			}
+			if (input == 'w') {
+				room = 1;
+			}
+			break;
+		case 5:
+			cout << "your in room 5 you can go north to 4" << endl;
+			cin >> input;
+			if (input == 'n') {
+				room = 4;
+			}
+			break;
+
+			}//end of switch
+
+    } while (input != 'q');
+}
